@@ -1,0 +1,36 @@
+{
+ "dibuat": "2026-10-29T10:57:08.236Z",
+ "chain": {
+  "ok": true,
+  "n": 290,
+  "head": "4bb2c051d90822c67399",
+  "errors": []
+ },
+ "protocol": {
+  "mulai": "2026-10-29T10:55:51.116Z",
+  "engine": "c7f151a420fb0701",
+  "agen": "Aturan Eliz"
+ },
+ "ready": false,
+ "locked": true,
+ "peek": false,
+ "counts": {
+  "tercatat_sesuai_protokol": 0,
+  "selesai": 0,
+  "menunggu": 0,
+  "terisi": 0,
+  "minggu_berbeda": 0,
+  "diabaikan_mesin_lain": 0,
+  "dilewati_dedupe": 0
+ },
+ "progress": {
+  "trade_terisi": [
+   0,
+   150
+  ],
+  "minggu": [
+   0,
+   20
+  ]
+ }
+}
