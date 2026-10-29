@@ -1,0 +1,12 @@
+{
+  "name": "mesin2-tn",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "test": "node scripts/test-engine.mjs && node scripts/test-backtest.mjs && node scripts/test-forward.mjs",
+    "backtest": "node scripts/backtest.mjs --shadow",
+    "forward": "node scripts/forward.mjs report"
+  }
+}

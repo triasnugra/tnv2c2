@@ -1,0 +1,28 @@
+{
+ "versi": 1,
+ "mulai": "2026-10-14T00:39:16.289Z",
+ "mulai_ms": 1791938356289,
+ "engine": "0537067ed55fc5be",
+ "agen": "Aturan Eliz",
+ "aturan": {
+  "hold_hari": 7,
+  "maks_sl_persen": 15,
+  "satu_order_aktif_per_koin": true,
+  "biaya": {
+   "fee_persen_per_sisi": 0.05,
+   "slip_persen": 0.05
+  },
+  "baseline_tp_kelipatan_risiko": 2
+ },
+ "syarat_evaluasi": {
+  "min_trade_terisi": 150,
+  "min_minggu_berbeda": 20
+ },
+ "kriteria_lulus": "Setelah KEDUA syarat evaluasi terpenuhi: batas bawah CI 95% (bootstrap per minggu) dari rata-rata R per trade terisi, setelah biaya, harus lebih dari 0. Selisih terhadap baseline MARKET per sinyal dilaporkan sebagai informasi nilai tambah logika, bukan syarat lulus.",
+ "larangan": [
+  "Mengubah core.mjs atau trade-sim.mjs. Hash mesin berubah dan baris baru tidak dihitung; mulai protokol baru bila perlu (hapus file ini).",
+  "Mengubah syarat evaluasi atau kriteria setelah protokol dimulai.",
+  "Mengedit atau menghapus baris jurnal. Rantai hash akan menandainya.",
+  "Menilai hasil sebelum syarat evaluasi terpenuhi. Angka sebelum itu hanya boleh dibaca sebagai kemajuan, bukan bukti."
+ ]
+}

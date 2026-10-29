@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="id"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#07121f">
+<title>Asgra TN machine</title>
+<style>
+:root{--bg:#07121f;--card:#0d1f33;--line:#1b3550;--tx:#e6edf5;--mut:#8aa0b8;--ok:#34d399;--bad:#f87171;--warn:#fbbf24;--ac:#38bdf8}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:52px}
+body{margin:0;background:var(--bg);color:var(--tx);font:15px/1.5 system-ui,sans-serif;padding:0 14px 40px;max-width:780px;margin:auto}
+header{display:flex;justify-content:space-between;align-items:center;padding:14px 0 6px}
+h1{font-size:20px;margin:0}h1 b{color:var(--ac)}h2{font-size:16px;margin:24px 0 8px}a{color:var(--ac)}
+nav{position:sticky;top:0;z-index:5;background:var(--bg);display:flex;gap:6px;overflow-x:auto;padding:8px 0;border-bottom:1px solid var(--line)}
+nav a{white-space:nowrap;text-decoration:none;color:var(--mut);padding:5px 11px;border:1px solid var(--line);border-radius:99px;font-size:13px}
+nav a:hover{color:var(--tx);border-color:var(--ac)}
+.al{padding:9px 12px;border-radius:8px;margin:8px 0 0;font-size:14px;border:1px solid}
+.al.r{background:#3b1418;border-color:#7f1d1d}.al.y{background:#3a2c08;border-color:#854d0e}.al.g{background:#0c2a1f;border-color:#14532d}.al small{color:var(--mut)}
+button{background:var(--ac);color:#04121f;border:0;border-radius:8px;padding:8px 14px;font-weight:600;font-size:14px;cursor:pointer}button:disabled{opacity:.5}
+.bar{display:flex;flex-wrap:wrap;gap:10px;align-items:flex-end;margin-bottom:8px}
+.bar label{font-size:12px;color:var(--mut);display:flex;flex-direction:column;gap:2px}
+input{width:92px;background:var(--card);border:1px solid var(--line);color:var(--tx);border-radius:8px;padding:7px 9px;font-size:14px}
+.seg{display:flex;border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.seg button{background:transparent;color:var(--mut);border-radius:0;padding:8px 12px}.seg button.on{background:var(--line);color:var(--tx)}
+#pg{height:3px;background:var(--line);border-radius:2px;overflow:hidden;margin:8px 0}#pg i{display:block;height:100%;width:0;background:var(--ac);transition:width .3s}
+.c{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px;margin:10px 0}
+.t{display:flex;justify-content:space-between;align-items:center;font-size:16px;margin-bottom:4px}
+.bd,.ch{font-size:12px;font-weight:700;padding:2px 8px;border-radius:99px}
+.bd.L{background:#0c2a1f;color:var(--ok)}.bd.S{background:#3b1418;color:var(--bad)}
+.ch{border:1px solid var(--line);color:var(--mut)}.ch.ok{color:var(--ok);border-color:#14532d}.ch.bad{color:var(--bad);border-color:#7f1d1d}.ch.wait{color:var(--warn);border-color:#854d0e}
+.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin:8px 0;font-size:14px}.g4 span{display:block;color:var(--mut);font-size:11px}
+.m{color:var(--mut);font-size:13px}.w{color:var(--warn);font-size:13px}.sz{margin-top:6px;padding:6px 9px;background:#0a1a2b;border-radius:8px;font-size:13px}
+.sc{overflow-x:auto}table{border-collapse:collapse;width:100%;font-size:13px}
+th,td{padding:7px 8px;border-bottom:1px solid var(--line);text-align:left;white-space:nowrap}th{color:var(--mut);font-weight:500}
+.TP{color:var(--ok)}.SL{color:var(--bad)}
+details{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 12px;margin-top:24px}summary{cursor:pointer;font-weight:600}li{margin:4px 0;font-size:14px}
+:focus-visible{outline:2px solid var(--ac);outline-offset:2px}
+.c details{margin-top:8px;padding:6px 10px;background:#0a1a2b}svg text{font:10px system-ui}
+.rdy{padding:10px 12px;border-radius:8px;font-size:14px;border:1px solid;margin-bottom:8px}.rdy.no{background:#3b1418;border-color:#7f1d1d}.rdy.go{background:#0c2a1f;border-color:#14532d}.rdy.mid{background:#3a2c08;border-color:#854d0e}
+.chk{font-size:13px;margin:3px 0}.chk b{display:inline-block;width:18px}.bar2{display:flex;align-items:center;gap:8px;font-size:13px;margin:3px 0}.bar2 i{display:block;height:8px;border-radius:4px;background:var(--ac)}
+@media(max-width:480px){.g4{grid-template-columns:repeat(2,1fr)}}
+</style></head><body>
+<header><h1>ASGRA <b>journal</b></h1><a href="../">Kembali ke tradhub</a></header>
+<nav><a href="#ready">Uang nyata?</a><a href="#gate">Gerbang BTC</a><a href="#sig">Sinyal</a><a href="#fun">Penolakan</a><a href="#watch">Pantauan</a><a href="#jr">Jurnal</a><a href="#kartu">Strategi</a></nav>
+<div id="al"></div>
+
+<h2 id="ready">Gerbang uang nyata</h2><div id="rd" class="c m">Memuat…</div>
+
+<h2 id="gate">BTC door</h2><div id="gt" class="c m">Memuat…</div>
+<h2 id="dom">Dominasi BTC dan musim altcoin</h2><div id="dm" class="c m">Menunggu scan…</div>
+
+<h2 id="sig">Sinyal setup</h2>
+<div class="bar"><label>Modal ($)<input id="cap" type="number" min="0"></label><label>Risiko per trade (%)<input id="rk" type="number" step=".1" min="0"></label>
+<div class="seg" id="flt"><button data-f="all" class="on">Semua</button><button data-f="1">Long</button><button data-f="-1">Short</button></div><button id="go">Scan ulang</button></div>
+<div id="pg"><i></i></div><p id="st" class="m"></p><div id="rk2"></div><div id="out"></div>
+
+<h2 id="fun">Kenapa setup ditolak</h2><div id="fn" class="c m">Menunggu scan…</div>
+
+<h2 id="watch">Pantauan 40 koin</h2><div class="sc"><table id="wt"><tr><td class="m">Menunggu scan…</td></tr></table></div><p class="m">Ketuk baris koin untuk melihat grafiknya.</p><div id="wc"></div>
+
+<h2 id="jr">Jurnal sinyal Asgra</h2><div id="stats" class="g4"></div>
+<div id="fw" class="c m" style="display:none"></div>
+<div class="sc"><table id="jt"><tr><td class="m">Memuat jurnal…</td></tr></table></div>
+
+<details id="kartu"><summary>Kartu strategi Crypto</summary>
+<p class="m">V = disebut langsung di video/tweet. I = interpretasi ke kode.</p><ul>
+<li>V: Ikuti tren makro (weekly/3 hari). Tren naik cari long, short hanya dengan deviasi. (EMA20/50 weekly, I)</li>
+<li>V: BTC jadi gerbang. Long altcoin saat BTC turun diberi peringatan.</li>
+<li>V: Trading di range high/low, hindari mid-range. (range 60 hari, I)</li>
+<li>V: Entry limit di retest setelah breakout ber-close, atau deviasi lalu recovery. SL di bawah/atas wick deviasi.</li>
+<li>V: Fibonacci 0.75 sebagai zona koreksi tren.</li>
+<li>V: OBV dan RSI divergence sebagai konfirmasi. OBV tidak andal di koin volume kecil.</li>
+<li>V: SL ketat: scalping 3–5%, swing 10–15%. SL lebih lebar ditolak. (minimum 3%, I)</li>
+<li>V: Hindari trading saat penutupan bulanan, libur bervolume tipis, dan saat Monday range masih terbentuk. FOMC: tweet terbarunya bilang strategi sama, abaikan noise berita, hanya trading dengan trigger.</li>
+<li>V: Monday Low/High adalah level kunci mingguan. Trigger: sweep di luar level lalu reclaim dan retest. (dari candle harian Senin, I)</li>
+<li>V: Level kunci seperti flip 82K–83K boleh dimasuki di retest langsung tanpa menunggu deviasi.</li>
+<li>V: Ambil profit bertahap. (target 2R dan tepi range, I)</li>
+<li>Belum terverifikasi: Supertrend, Volume Profile (hanya ada di tweet, tidak dijelaskan di video). Tidak dipakai.</li>
+<li>V: Three Tap/Top: range dengan 2 sentuhan, sentuhan ke-3 berupa manipulasi lalu retest. SL di wick manipulasi. (deteksi pivot, I)</li>
+<li>V: Wolf: breakout trendline yang gagal lalu harga masuk lagi. Versi bullish kebalikannya (I). Trendline dari 2 pivot terakhir, I.</li>
+<li>V: Dominasi BTC sebagai penanda musim altcoin. (kesimpulan musim altcoin dari ETH/BTC dan 30 hari performa, I)</li>
+<li>V: Double Deviation: sweep pertama lebih dalam, sweep kedua lebih dangkal, keduanya reclaim = tekanan jual melemah, lalu ekspansi. (I: dalam 10 hari terakhir)</li>
+<li>V: Retest langsung di zona kuat (2+ sentuhan, searah tren) boleh tanpa menunggu deviasi. Zona = kotak 0.6 ATR dari tepi range (I).</li>
+<li>V: Konfirmasi di timeframe rendah: retest tertahan di 4H, batal bila close 12H melewati SL. (I: kriteria persisnya)</li>
+<li>V: Setup asimetris (contoh SUI, NEAR): SL lebar dibolehkan hanya untuk spot bila target minimal 3 kali jarak SL. Tanpa leverage.</li>
+<li>Belum dikodekan: order book dan heatmap likuiditas.</li></ul></details>
+
+<script type="module">
+import {bj,kl,NOT,feat,alertList,conf,scanInput,btcCtx,selectPortfolio,REJ_TEXT,CFG,ENGINE_VERSION} from './core.mjs';
+import {riskState,sizePosition,portfolioHeat,readiness,RISK} from './risk-lib.mjs';
+const $=s=>document.querySelector(s),SD=['turun','netral','naik'];
+const f=v=>v>=100?v.toFixed(1):v>=1?v.toFixed(3):v.toPrecision(3);
+const ld=k=>{try{return localStorage.getItem(k)}catch(e){return null}},sv=(k,v)=>{try{localStorage.setItem(k,v)}catch(e){}};
+let res=[],all=[],btc=null,flt='all',extra=[],rs=riskState([]),dropped=[],bad=0;
+const esc=t=>String(t).replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+$('#cap').value=ld('cap')||1000;$('#rk').value=ld('rk')||1;
+function showAl(){const A=[...alertList(),...extra];$('#al').innerHTML=A.map(a=>`<div class="al ${a[0]}">${a[1]} <small>${a[2]||''}</small></div>`).join('')||'<div class="al g">Tidak ada alert tanggal hari ini.</div>'}
+const tw=r=>r.m>=55?SD[r.tw+1]:'n/a';
+function card(r){const cap=+$('#cap').value||0,rk=+$('#rk').value||0,rm=rs.riskMult,z=sizePosition({cap,riskPct:rk*rm,entry:r.entry,sl:r.sl});
+ const s=r.dist<=1.5?['AKTIF','ok']:['MENUNGGU RETEST','wait'],gc=r.grade=='A'?'ok':'wait';
+ const sz=rm==0?`<div class="sz" style="color:var(--bad)">PROTEKSI RISIKO: JANGAN ENTRY (${esc(rs.why.join('; '))})</div>`:`<div class="sz">Risiko $${z.usd.toFixed(0)}${rm<1?` (dipotong ${(1-rm)*100}% oleh proteksi)`:''}: qty ${z.qty>=100?z.qty.toFixed(0):z.qty.toPrecision(3)} ${r.s} (≈$${z.notional.toFixed(0)}${z.lev>1.05?`, leverage ${z.lev.toFixed(1)}×`:''})${z.warn.length?`<div class="w">${z.warn.join(' · ')}</div>`:''}</div>`;
+ return `<div class="c"><div class="t"><b>${r.s}</b><span><span class="bd ${r.side==1?'L':'S'}">${r.side==1?'LONG':'SHORT'}</span> <span class="ch ${gc}">Skor ${r.score} · ${r.grade}</span> <span class="ch ${s[1]}">${s[0]}</span></span></div>
+<div class="g4"><div><span>Entry limit</span>${f(r.entry)}</div><div><span>SL ${r.slp.toFixed(1)}%</span>${f(r.sl)}</div><div><span>TP 2R</span>${f(r.tp)}</div><div><span>Target range</span>${f(r.t2)}</div></div>
+<div class="m">Harga ${f(r.px)} · jarak ke entry ${r.dist.toFixed(1)}% · ${r.type} · pemicu ${r.age==0?'tanpa peristiwa':'umur '+r.age+' hari'} · ruang target ${r.tgtR.toFixed(1)}R</div>
+<div class="m">4H/12H: ${r.cf?`<span class="ch ${r.cf[0]}">${r.cf[1]}</span>`:'memuat…'}</div>
+<div class="m">Tren W ${tw(r)} · D ${SD[r.td+1]} · ${r.why.join(' · ')}</div>${r.w.length?`<div class="w">${r.w.join(' · ')}</div>`:''}
+${sz}<details><summary>Grafik 90 hari</summary>${chart(r)}</details></div>`}
+function render(){const L=res.filter(r=>flt=='all'||r.side==flt),rk=+$('#rk').value||0,h=portfolioHeat(res.length,rk,rs.riskMult);
+ $('#rk2').innerHTML=(rs.level!='ok'?`<div class="rdy ${rs.level=='berhenti'?'no':'mid'}"><b>PROTEKSI RISIKO: ${rs.level.toUpperCase()}</b> · ${esc(rs.why.join('; '))}. ${rs.level=='berhenti'?'Jangan buka posisi baru sampai kondisi pulih.':'Ukuran posisi dipotong setengah.'}</div>`:'')+(res.length>1&&h.pct>0?`<p class="m">Bila semua ${res.length} sinyal kena SL bersamaan: -${h.pct.toFixed(1)}% modal.${h.warn?` <span class="w">${h.warn}. Altcoin bergerak serempak, jadi ini skenario nyata.</span>`:''}</p>`:'');
+ $('#out').innerHTML=L.map(card).join('')||'<p class="m">Tidak ada setup yang lolos semua gerbang kualitas. Diam juga posisi. Lihat "Kenapa setup ditolak" di bawah.</p>'}
+function gate(){const b=btc,t=b.tr;
+ const bias=b.mid?'BTC di mid-range: kurangi aktivitas, tunggu tepi range.':t==1?(b.pos<.4?'Tren naik dan dekat support: cari long.':'Tren naik: utamakan long, short hanya dengan deviasi.'):t==-1?'Tren turun: utamakan short atau diam, long hanya dengan deviasi.':'Tren netral: kurangi ukuran posisi.';
+ $('#gt').className='c';$('#gt').innerHTML=`<div class="g4"><div><span>Harga BTC</span>${f(b.px)}</div><div><span>Tren weekly</span>${tw(b)}</div><div><span>Tren daily</span>${SD[b.td+1]}</div><div><span>Posisi range</span>${Math.round(b.pos*100)}%</div></div><div class="m">${bias}${b.flip?' Tren weekly baru berbalik dalam 3 minggu terakhir.':''}</div><div class="m">Level weekly (26 minggu): support ${f(b.wlow)} · resistance ${f(b.whigh)}. Eliz: selama BTC bertahan di atas support weekly, koreksi dilihat sebagai peluang beli, dan invalidasi hanya bila breakdown ber-close di bawahnya. Fokus ke level, bukan sentimen. (Level ini hitungan otomatis, bukan garis manual Eliz.)</div><div style="margin-top:8px">${chart(b)}</div>`}
+const stt=r=>r.ok?'SETUP':r.side?(r.watch?'hampir setup: tunggu harga ke entry':'ditolak: '+(REJ_TEXT[r.rej[0]]||r.rej[0])):r.flat?'harga datar/stabil':r.mid?'mid-range, hindari':r.pos<.2?'dekat range low: tunggu deviasi/retest':r.pos>.8?'dekat range high: tunggu breakout-retest/deviasi':'belum ada pemicu';
+function watch(){all.sort((a,b)=>Math.min(a.pos,1-a.pos)-Math.min(b.pos,1-b.pos));
+ $('#wt').innerHTML='<tr><th>Koin</th><th>Weekly</th><th>Daily</th><th>Range</th><th>Pola</th><th>Status</th></tr>'+all.map(r=>`<tr data-s="${r.s}" style="cursor:pointer"><td>${r.s}</td><td>${tw(r)}</td><td>${SD[r.td+1]}</td><td>${Math.round(r.pos*100)}%</td><td>${r.tags.join(', ')||'-'}</td><td>${stt(r)}</td></tr>`).join('')}
+function chart(r){const k=r.k,W=640,Hh=230,n=k.length,bw=W/n,P=14,L=[[r.H,'range high','#8aa0b8'],[r.L,'range low','#8aa0b8']];
+ if(r.monL)L.push([r.monL,'Monday low','#a78bfa'],[r.monH,'Monday high','#a78bfa']);
+ if(r.entry)L.push([r.entry,'entry','#38bdf8'],[r.sl,'SL','#f87171'],[r.tp,'TP','#34d399']);
+ const mx=Math.max(...k.map(q=>q.h),...L.map(a=>a[0])),mn=Math.min(...k.map(q=>q.l),...L.map(a=>a[0])),y=v=>(P+(mx-v)/(mx-mn)*(Hh-2*P)).toFixed(1);
+ let s=`<svg viewBox="0 0 ${W} ${Hh}" width="100%" role="img" aria-label="Grafik harian ${r.s}" style="background:#0a1a2b;border-radius:8px">`;
+ for(const[z,c]of[[r.zs,'#34d399'],[r.zr,'#f87171']])if(z)s+=`<rect x="0" y="${y(z.b)}" width="${W}" height="${Math.max(2,y(z.a)-y(z.b))}" fill="${c}" opacity=".13"/>`;
+ k.forEach((q,i)=>{const x=(i*bw+bw/2).toFixed(1),c=q.c>=q.o?'#34d399':'#f87171';s+=`<line x1="${x}" x2="${x}" y1="${y(q.h)}" y2="${y(q.l)}" stroke="${c}"/><rect x="${(x-bw*.35).toFixed(1)}" y="${y(Math.max(q.o,q.c))}" width="${(bw*.7).toFixed(1)}" height="${Math.max(1,Math.abs(y(q.o)-y(q.c)))}" fill="${c}"/>`});
+ for(const[v,t,c]of L)s+=`<line x1="0" x2="${W}" y1="${y(v)}" y2="${y(v)}" stroke="${c}" stroke-dasharray="4 3"/><text x="4" y="${y(v)-3}" fill="${c}">${t} ${f(v)}</text>`;
+ if(r.tl){const a=Math.max(r.tl.a,r.off),v=i=>r.tl.av+r.tl.sl*(i-r.tl.a);s+=`<line x1="${((a-r.off+.5)*bw).toFixed(1)}" y1="${y(v(a))}" x2="${((r.tl.e-r.off+.5)*bw).toFixed(1)}" y2="${y(v(r.tl.e))}" stroke="#fbbf24" stroke-width="2"/><text x="${W-120}" y="14" fill="#fbbf24">trendline Wolf</text>`}
+ return s+'</svg>'}
+async function dom(){let g=null,H=[],eb=null;
+ try{g=(await (await fetch('https://api.coingecko.com/api/v3/global',{signal:AbortSignal.timeout(10000)})).json()).data.market_cap_percentage}catch(e){}
+ try{H=await (await fetch('data/dominance.json')).json()}catch(e){}
+ try{const s=scanInput(await kl('ETHBTC'));eb=feat(s.bars,s.qv)}catch(e){}
+ const al=all.filter(r=>r.s!=='ETH'&&r.s!=='BTC'),br=al.length?Math.round(al.filter(r=>r.ret30>btc.ret30).length/al.length*100):null;
+ const d7=new Date(Date.now()-7*864e5).toISOString().slice(0,10),p=H.filter(x=>x.d<=d7).at(-1);
+ const v=eb&&eb.tr==1&&br>=50?'Mengarah ke musim altcoin: ETH/BTC naik dan mayoritas altcoin mengungguli BTC.':eb&&eb.tr==-1&&br<40?'BTC dominan: altcoin tertinggal dari BTC. Pilih altcoin hanya dengan setup kuat.':'Campuran: belum musim altcoin penuh. Pilih koin satu per satu.';
+ $('#dm').className='c';$('#dm').innerHTML=`<div class="g4"><div><span>Dominasi BTC</span>${g?g.btc.toFixed(1)+'%':'n/a'}</div><div><span>Dominasi ETH</span>${g?g.eth.toFixed(1)+'%':'n/a'}</div><div><span>ETH/BTC (W / D)</span>${eb?tw(eb)+' / '+SD[eb.td+1]:'n/a'}</div><div><span>Altcoin > BTC (30 hari)</span>${br==null?'n/a':br+'%'}</div></div><div class="m">${v} (kesimpulan ini interpretasi)</div><div class="m">${g&&p?`Dominasi BTC 7 hari: ${g.btc-p.btc>=0?'+':''}${(g.btc-p.btc).toFixed(1)} poin. `:'Riwayat dominasi terkumpul harian lewat GitHub Actions. '}Skenario Eliz: dominasi BTC ditolak di zona tinggi (ia menyebut 57–58% pada 2024) bersamaan BTC ditolak, lalu ETH naik, lalu altcoin.</div>`}
+function funnel(){const c={};for(const r of all){if(!r.side){c['tanpa-pemicu']=(c['tanpa-pemicu']||0)+1;continue}if(!r.ok)r.rej.forEach(k=>c[k]=(c[k]||0)+1)}
+ for(const d of dropped)c[d.why]=(c[d.why]||0)+1;if(bad)c['data-tidak-valid']=bad;
+ const rows=Object.entries(c).sort((a,b)=>b[1]-a[1]),mx=rows[0]?rows[0][1]:1,cand=all.filter(r=>r.side).length,w=all.filter(r=>r.watch&&!r.ok);
+ $('#fn').className='c';$('#fn').innerHTML=`<div class="m">${all.length} koin dipindai · ${cand} punya pemicu · <b>${res.length}</b> lolos semua gerbang dan batas portofolio (v${ENGINE_VERSION}, skor minimum ${CFG.minScore}).</div><div style="margin-top:6px">`+rows.map(([k,v])=>`<div class="bar2"><span style="width:240px;flex:none">${esc(REJ_TEXT[k]||k)}</span><i style="width:${Math.max(4,v/mx*120)}px"></i>${v}</div>`).join('')+'</div>'
+ +(w.length?`<div class="m" style="margin-top:8px"><b>Hampir setup</b> (bukan sinyal, tidak dicatat jurnal): ${w.map(r=>`${r.s} ${r.side==1?'LONG':'SHORT'} bila harga ke ${f(r.entry)} (jarak ${r.dist.toFixed(1)}%, skor ${r.score})`).join(' · ')}</div>`:'')}
+async function go(){const b=$('#go');b.disabled=true;res=[];all=[];dropped=[];bad=0;extra=[];$('#out').innerHTML='';$('#pg i').style.width='3%';
+ try{$('#st').textContent='Mengambil daftar koin…';
+  const t=await bj('ticker/24hr'),top=t.filter(x=>x.symbol.endsWith('USDT')&&!NOT.test(x.symbol.slice(0,-4))).sort((a,b)=>b.quoteVolume-a.quoteVolume).slice(0,40);
+  const bk=await kl('BTCUSDT');const bs=scanInput(bk);btc=feat(bs.bars,bs.qv);btc.s='BTC';gate();const cx=btcCtx(btc);
+  const v=bk.slice(-22,-2).map(q=>q.v),avg=v.reduce((a,b)=>a+b,0)/v.length;
+  if(bk.at(-2).v<.6*avg)extra.push(['y','Volume BTC kemarin di bawah 60% rata-rata 20 hari.','Volume tipis']);
+  if(btc.mid)extra.push(['y','BTC di mid-range. Eliz memilih diam saat ragu.','Interpretasi']);showAl();
+  for(let i=0;i<top.length;i+=8){$('#st').textContent=`Memindai ${Math.min(i+8,40)}/40…`;$('#pg i').style.width=(10+Math.min(i+8,40)/40*90)+'%';
+   await Promise.all(top.slice(i,i+8).map(async x=>{try{const sc=scanInput(await kl(x.symbol));const r=feat(sc.bars,sc.qv,x.symbol==='BTCUSDT'?undefined:cx);r.s=x.symbol.slice(0,-4);all.push(r)}catch(e){bad++}}))}
+  const sel=selectPortfolio(all.filter(r=>r.ok));res=sel.picked;dropped=sel.dropped;
+  for(const r of res){r.w=[];if(r.qv<2e7)r.w.push('volume tipis, OBV tidak andal');if(r.type.startsWith('spot'))r.w.push('SL lebar: hanya untuk spot tanpa leverage');if(r.ct)r.w.push('melawan tren makro koin (lolos karena ada divergensi)');if(cx&&r.side==-cx.tr)r.w.push('BTC tidak sepenuhnya searah')}
+  res.sort((a,b)=>b.score-a.score||a.dist-b.dist);render();watch();funnel();await Promise.all(res.map(async r=>{try{r.cf=await conf(r)}catch(e){r.cf=['','tidak tersedia']}}));render();try{await dom()}catch(e){}
+  $('#st').textContent=`Selesai: ${res.length} setup lolos, ${all.length} koin dipantau${bad?`, ${bad} koin dilewati karena data tidak valid`:''}.`;
+ }catch(e){$('#st').textContent='Semua server Binance gagal dijangkau ('+(e&&e.name==='TimeoutError'?'timeout':e&&e.message)+'). Coba ganti jaringan atau VPN.'}
+ $('#pg i').style.width='100%';b.disabled=false}
+$('#go').onclick=go;
+$('#wt').onclick=e=>{const t=e.target.closest('tr[data-s]');if(!t)return;const r=all.find(x=>x.s===t.dataset.s);$('#wc').innerHTML=`<div class="c"><b>${r.s}</b> <span class="m">${r.tags.join(', ')}</span>${chart(r)}</div>`}
+$('#flt').onclick=e=>{const x=e.target.closest('button');if(!x)return;flt=x.dataset.f;[...$('#flt').children].forEach(c=>c.classList.toggle('on',c==x));render()};
+['cap','rk'].forEach(id=>$('#'+id).oninput=e=>{sv(id,e.target.value);render()});
+
+fetch('data/journal.json').then(r=>r.json()).then(j=>{
+ const J=j.filter(r=>r.agen==='Aturan Eliz').reverse(),cl=J.filter(r=>['TP','SL','kedaluwarsa'].includes(r.hasil)),
+ W=J.filter(r=>r.hasil==='TP').length,Ls=J.filter(r=>r.hasil==='SL').length,Rs=cl.map(r=>+r.R).filter(Number.isFinite),sum=Rs.reduce((a,b)=>a+b,0);
+ rs=riskState(J.filter(r=>r.sv===2));render();
+ const nv2=J.filter(r=>r.sv===2).length;
+ $('#stats').innerHTML=[['Sinyal',J.length],['Win rate',W+Ls?Math.round(W/(W+Ls)*100)+'%':'-'],['Rata-rata R',Rs.length?(sum/Rs.length).toFixed(2):'-'],['Total R',Rs.length?sum.toFixed(1):'-']].map(a=>`<div class="c" style="margin:0"><span class="m">${a[0]}</span><br><b>${a[1]}</b></div>`).join('')+`<p class="m" style="grid-column:1/-1;margin:2px 0">${cl.length<30?`Baru ${cl.length} sinyal tertutup. Butuh minimal 30 sebelum angka ini bermakna. `:''}Angka ini mencampur ${J.length-nv2} baris arsip mesin v1 (dengan pengulangan harian dan tanpa gerbang) dan ${nv2} baris mesin v2. Keputusan memakai uji forward di atas, bukan panel ini.</p>`;
+ const H=['waktu','aset','arah','entry','sl','tp','hasil','R','skor','grade','alasan'];
+ $('#jt').innerHTML='<tr>'+H.map(h=>`<th>${h}</th>`).join('')+'</tr>'+(J.map(r=>'<tr>'+H.map(h=>`<td class="${h=='hasil'?r.hasil:''}">${esc(r[h]??'')}</td>`).join('')+'</tr>').join('')||'<tr><td class="m">Belum ada sinyal tercatat.</td></tr>')
+}).catch(()=>{$('#jt').innerHTML='<tr><td class="m">Belum ada data jurnal.</td></tr>'});
+function ready(a){const r=readiness(a);$('#rd').className='c';
+ $('#rd').innerHTML=`<div class="rdy ${r.layak?'go':'no'}"><b>${esc(r.headline)}</b></div>`+r.items.map(i=>`<div class="chk"><b style="color:var(${i.ok?'--ok':'--bad'})">${i.ok?'✓':'✗'}</b>${esc(i.nama)} <span class="m">${esc(i.ket)}</span></div>`).join('')+`<div class="m" style="margin-top:6px">Sampai semua syarat terpenuhi, pakai sinyal ini hanya untuk belajar dan paper trading. Win rate historis yang rendah (26,2% pada 65 trade) belum cukup sebagai bukti arah mana pun: selang kepercayaannya 17–38%.</div>`}
+fetch('data/forward-report.json').then(r=>r.json()).then(a=>{ready(a);const p=a.progress,c=a.counts,e=$('#fw');e.style.display='';
+ const v=a.ready&&a.verdict?(a.verdict.pass?'LULUS':'TIDAK LULUS'):'';
+ e.innerHTML='<b>Forward test</b> (uji bersih, mulai '+String(a.protocol.mulai).slice(0,10)+')<br>Trade terisi '+p.trade_terisi[0]+'/'+p.trade_terisi[1]+' · minggu '+p.minggu[0]+'/'+p.minggu[1]+' · menunggu '+c.menunggu+(a.chain.ok?'':' · <b>JURNAL DIEDIT, lihat data/forward-report.md</b>')+'<br>'+(a.ready?'Evaluasi: <b>'+v+'</b>':'Angka kinerja forward test disembunyikan sampai syarat terpenuhi, agar aturan tidak diubah di tengah jalan.')}).catch(()=>ready(null));
+showAl();go();
+</script></body></html>
