@@ -1,0 +1,76 @@
+name: Deploy ke GitHub Pages
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: "*/30 * * * 1-5"   # tiap 30 menit di hari kerja: jurnal + data saham & forex
+    - cron: "0 */2 * * 0,6"    # akhir pekan: crypto tetap berjalan, jurnal perlu dinilai
+  workflow_dispatch:
+    inputs:
+      force:
+        description: "Paksa buat prediksi baru sekarang (abaikan jendela jam 01-05 UTC)"
+        type: boolean
+        default: false
+permissions:
+  contents: write   # perlu untuk commit balik data/journal.json
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: false   # jangan batalkan run yang sedang menulis jurnal
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      # 1) Jurnal: nilai prediksi lama, buat prediksi baru, catat dominasi BTC.
+      - name: Update jurnal sinyal
+        run: node scripts/jurnal.mjs
+        continue-on-error: true
+        env:
+          FORCE: ${{ inputs.force && '1' || '' }}
+          USE_AI: ${{ vars.USE_AI }}          # Settings > Variables: isi 1 untuk mengaktifkan agen AI
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          PERPLEXITY_API_KEY: ${{ secrets.PERPLEXITY_API_KEY }}
+
+      # 1b) Forward test: cek rantai hash jurnal (cetak hash ujung ke ringkasan run) lalu tulis laporan.
+      - name: Forward test - verifikasi integritas
+        run: node scripts/forward.mjs verify
+        continue-on-error: true
+      - name: Forward test - laporan
+        run: node scripts/forward.mjs report
+        continue-on-error: true
+
+      # 2) Simpan jurnal ke repo, kalau tidak hasilnya hilang setiap run.
+      #    Commit oleh GITHUB_TOKEN tidak memicu workflow lagi, jadi tidak ada loop.
+      #    Bila branch main diproteksi, izinkan github-actions[bot] untuk push.
+      - name: Commit data jurnal
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A data/
+          if git diff --staged --quiet; then echo "Tidak ada perubahan jurnal"; exit 0; fi
+          git commit -m "chore: update jurnal [skip ci]"
+          git push || (git pull --rebase && git push)
+
+      # 3) Data saham & forex, hanya bila config.js ada di repo.
+      - name: Ambil data saham & forex (Yahoo Finance)
+        if: ${{ hashFiles('config.js') != '' }}
+        run: node scripts/fetch-market.mjs
+        continue-on-error: true
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+      - id: deployment
+        uses: actions/deploy-pages@v4

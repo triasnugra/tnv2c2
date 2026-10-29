@@ -1,0 +1,21 @@
+name: Forward test - verifikasi penuh (nilai ulang hasil)
+
+# Jalankan manual kapan saja, terutama sebelum membaca hasil evaluasi.
+# Memeriksa rantai hash jurnal DAN menilai ulang setiap hasil dari data Binance.
+# Gagal (merah) bila ada baris yang diedit atau hasil yang tidak cocok.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Verifikasi + nilai ulang
+        run: node scripts/forward.mjs verify --regrade
