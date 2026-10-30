@@ -1,0 +1,37 @@
+[
+ {
+  "d": "2026-10-30",
+  "mesin": "2.0",
+  "dipindai": 36,
+  "kandidat": 1,
+  "dicatat": 1,
+  "ditolak": {
+   "data-tidak-valid": 4,
+   "jauh-dari-entry": 25,
+   "ruang-target-sempit": 4,
+   "usang-tp-tercapai": 4,
+   "tanpa-pemicu": 8,
+   "skor-rendah": 1,
+   "usang-umur": 1
+  },
+  "btc": {
+   "tr": -1,
+   "td": 0,
+   "ret3d": -2.69
+  },
+  "proteksi": {
+   "level": "ok",
+   "alasan": []
+  },
+  "dicatat_detail": [
+   {
+    "s": "BCH",
+    "arah": "SHORT",
+    "skor": 75,
+    "grade": "A",
+    "umur": 1,
+    "pemicu": "mon"
+   }
+  ]
+ }
+]
