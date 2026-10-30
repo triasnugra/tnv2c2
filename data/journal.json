@@ -10089,13 +10089,14 @@
   "keyakinan": "",
   "alasan": "Three Tap: 2 sentuhan lalu manipulasi di bawah",
   "alert": "FOMC hari ini atau besok: berita memicu noise. Eliz tetap hanya trading bila ada trigger jelas.",
-  "hasil": "menunggu",
-  "R": "",
+  "hasil": "SL",
+  "R": -1,
   "engine": "0537067ed55fc5be",
   "fwd": 1,
   "seq": 281,
   "prev": "01421154c5c80452d871",
-  "h": "633785272fbda48fa753"
+  "h": "633785272fbda48fa753",
+  "tx": 1793368800000
  },
  {
   "id": "2026-10-28|Aturan Eliz|PEPE",
