@@ -10449,5 +10449,33 @@
   "seq": 291,
   "prev": "4bb2c051d90822c67399",
   "h": "5acac4f777339a178375"
+ },
+ {
+  "id": "2026-10-31|Aturan Eliz|SUI",
+  "waktu": "2026-10-31 02:58 UTC",
+  "t": 1793415495815,
+  "due": 1794020295815,
+  "agen": "Aturan Eliz",
+  "aset": "SUI",
+  "arah": "SHORT",
+  "entry": 0.9312,
+  "sl": 0.98865,
+  "tp": 0.8163,
+  "harga_awal": 0.9051,
+  "keyakinan": "",
+  "alasan": "sweep Monday High lalu reclaim, Wolf: breakout trendline gagal, searah tren",
+  "alert": "Hari terakhir bulan. Penutupan bulanan 00:00 UTC.",
+  "hasil": "menunggu",
+  "R": "",
+  "trig": "mon",
+  "score": 82,
+  "grade": "A",
+  "age": 2,
+  "engine": "c7f151a420fb0701",
+  "fwd": 1,
+  "sv": 2,
+  "seq": 292,
+  "prev": "5acac4f777339a178375",
+  "h": "6da84ca86f6a3ce97687"
  }
 ]
