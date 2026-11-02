@@ -69,5 +69,59 @@
     "pemicu": "mon"
    }
   ]
+ },
+ {
+  "d": "2026-11-02",
+  "mesin": "2.0",
+  "dipindai": 35,
+  "kandidat": 3,
+  "dicatat": 3,
+  "ditolak": {
+   "data-tidak-valid": 5,
+   "usang-umur": 17,
+   "jauh-dari-entry": 22,
+   "usang-tp-tercapai": 13,
+   "ruang-target-sempit": 5,
+   "tanpa-pemicu": 7,
+   "skor-rendah": 10,
+   "sl-lebar": 2,
+   "usang-sudah-berjalan": 1,
+   "likuiditas-rendah": 10
+  },
+  "btc": {
+   "tr": -1,
+   "td": 0,
+   "ret3d": 0.46
+  },
+  "proteksi": {
+   "level": "ok",
+   "alasan": []
+  },
+  "dicatat_detail": [
+   {
+    "s": "PEPE",
+    "arah": "SHORT",
+    "skor": 80,
+    "grade": "A",
+    "umur": 1,
+    "pemicu": "dd"
+   },
+   {
+    "s": "LINK",
+    "arah": "SHORT",
+    "skor": 74,
+    "grade": "B",
+    "umur": 1,
+    "pemicu": "mon"
+   },
+   {
+    "s": "AAVE",
+    "arah": "SHORT",
+    "skor": 70,
+    "grade": "B",
+    "umur": 1,
+    "pemicu": "mon"
+   }
+  ]
  }
 ]
