@@ -8427,7 +8427,19 @@
   "seq": 227,
   "prev": "37b75b6e03de3210c998",
   "h": "71c63cc3c77f80ca9fed",
-  "tx": 1793304000000
+  "tx": 1793304000000,
+  "bm": {
+   "e": 0.1677,
+   "h": "kedaluwarsa",
+   "R": -0.135,
+   "tx": 1793586116987
+  },
+  "bi": {
+   "e": 0.1677,
+   "h": "SL",
+   "R": -1,
+   "tx": 1793318400000
+  }
  },
  {
   "id": "2026-10-26|Aturan Eliz|FIL",
@@ -8487,7 +8499,19 @@
   "seq": 229,
   "prev": "0cd0f22f6a841fe35608",
   "h": "1a08f52b5de86cd8a40a",
-  "tx": 1793304000000
+  "tx": 1793304000000,
+  "bm": {
+   "e": 2307.95,
+   "h": "kedaluwarsa",
+   "R": 0.195,
+   "tx": 1793586116987
+  },
+  "bi": {
+   "e": 2307.95,
+   "h": "SL",
+   "R": -1,
+   "tx": 1793318400000
+  }
  },
  {
   "id": "2026-10-26|Aturan Eliz|SOL",
@@ -8540,13 +8564,26 @@
   "keyakinan": "",
   "alasan": "sweep Monday High lalu reclaim, searah tren",
   "alert": "Senin: Monday range sedang terbentuk, harga cenderung kotor. Tunggu. Monday Low/High jadi level kunci minggu ini.",
-  "hasil": "menunggu",
-  "R": "",
+  "hasil": "kedaluwarsa",
+  "R": 0.78,
   "engine": "0537067ed55fc5be",
   "fwd": 1,
   "seq": 231,
   "prev": "084c44e848bd1ac5343f",
-  "h": "009f2eb665f7c8002f89"
+  "h": "009f2eb665f7c8002f89",
+  "tx": 1793586116987,
+  "bm": {
+   "e": 1.2904,
+   "h": "kedaluwarsa",
+   "R": 0.409,
+   "tx": 1793586116987
+  },
+  "bi": {
+   "e": 1.2904,
+   "h": "SL",
+   "R": -1,
+   "tx": 1793318400000
+  }
  },
  {
   "id": "2026-10-26|Aturan Eliz|NEAR",
@@ -8570,7 +8607,19 @@
   "seq": 232,
   "prev": "009f2eb665f7c8002f89",
   "h": "a2bbaaba8d66f5565055",
-  "tx": 1792982100000
+  "tx": 1792982100000,
+  "bm": {
+   "e": 4.488,
+   "h": "kedaluwarsa",
+   "R": 0.546,
+   "tx": 1793586116987
+  },
+  "bi": {
+   "e": 4.488,
+   "h": "SL",
+   "R": -1,
+   "tx": 1793304000000
+  }
  },
  {
   "id": "2026-10-26|Aturan Eliz|XAUT",
@@ -8587,13 +8636,26 @@
   "keyakinan": "",
   "alasan": "breakdown ber-close, retest, searah tren",
   "alert": "Senin: Monday range sedang terbentuk, harga cenderung kotor. Tunggu. Monday Low/High jadi level kunci minggu ini.",
-  "hasil": "menunggu",
-  "R": "",
+  "hasil": "kedaluwarsa",
+  "R": 1.41,
   "engine": "0537067ed55fc5be",
   "fwd": 1,
   "seq": 233,
   "prev": "a2bbaaba8d66f5565055",
-  "h": "d0b44a1a91d7efacdef9"
+  "h": "d0b44a1a91d7efacdef9",
+  "tx": 1793586116987,
+  "bm": {
+   "e": 3993.4,
+   "h": "kedaluwarsa",
+   "R": 0.738,
+   "tx": 1793586116987
+  },
+  "bi": {
+   "e": 3993.4,
+   "h": "kedaluwarsa",
+   "R": -0.738,
+   "tx": 1793586116987
+  }
  },
  {
   "id": "2026-10-26|Aturan Eliz|WLD",
@@ -8617,7 +8679,19 @@
   "seq": 234,
   "prev": "d0b44a1a91d7efacdef9",
   "h": "8135231cb1806eaf3136",
-  "tx": 1793257200000
+  "tx": 1793257200000,
+  "bm": {
+   "e": 0.4459,
+   "h": "kedaluwarsa",
+   "R": 0.903,
+   "tx": 1793586116987
+  },
+  "bi": {
+   "e": 0.4459,
+   "h": "SL",
+   "R": -1,
+   "tx": 1793304000000
+  }
  },
  {
   "id": "2026-10-26|Aturan Eliz|DOGE",
@@ -8850,13 +8924,26 @@
   "keyakinan": "",
   "alasan": "sweep Monday High lalu reclaim, Wolf: breakout trendline gagal",
   "alert": "Senin: Monday range sedang terbentuk, harga cenderung kotor. Tunggu. Monday Low/High jadi level kunci minggu ini.",
-  "hasil": "menunggu",
-  "R": "",
+  "hasil": "kedaluwarsa",
+  "R": 0.58,
   "engine": "0537067ed55fc5be",
   "fwd": 1,
   "seq": 241,
   "prev": "fea7444a3aafc17c6415",
-  "h": "2c74036bfc0a78ad8d46"
+  "h": "2c74036bfc0a78ad8d46",
+  "tx": 1793586116988,
+  "bm": {
+   "e": 0.004179,
+   "h": "kedaluwarsa",
+   "R": -0.044,
+   "tx": 1793586116988
+  },
+  "bi": {
+   "e": 0.004179,
+   "h": "kedaluwarsa",
+   "R": 0.044,
+   "tx": 1793586116988
+  }
  },
  {
   "id": "2026-10-26|Aturan Eliz|LTC",
@@ -8988,7 +9075,19 @@
   "seq": 245,
   "prev": "3c7c4e4dd61e3af9a78c",
   "h": "38f12ed46a2e22c2983b",
-  "tx": 1793314800000
+  "tx": 1793314800000,
+  "bm": {
+   "e": 0.405,
+   "h": "kedaluwarsa",
+   "R": 0.1,
+   "tx": 1793586116988
+  },
+  "bi": {
+   "e": 0.405,
+   "h": "SL",
+   "R": -1,
+   "tx": 1793318400000
+  }
  },
  {
   "id": "2026-10-26|Aturan Eliz|AVAX",
@@ -9048,7 +9147,19 @@
   "seq": 247,
   "prev": "5bf7d2ddf4a77ae12fa7",
   "h": "8c4ab0b82bce91686fc4",
-  "tx": 1793314800000
+  "tx": 1793314800000,
+  "bm": {
+   "e": 79676.34,
+   "h": "kedaluwarsa",
+   "R": 0.505,
+   "tx": 1793586116988
+  },
+  "bi": {
+   "e": 79676.34,
+   "h": "SL",
+   "R": -1,
+   "tx": 1793318400000
+  }
  },
  {
   "id": "2026-10-26|Aturan Eliz|BNB",
