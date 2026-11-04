@@ -9867,7 +9867,19 @@
   "seq": 267,
   "prev": "76c1f28f6a7c66d533da",
   "h": "d164eaa58573d982dbab",
-  "tx": 1793156820000
+  "tx": 1793156820000,
+  "bm": {
+   "e": 0.08505,
+   "h": "kedaluwarsa",
+   "R": 1.472,
+   "tx": 1793761602755
+  },
+  "bi": {
+   "e": 0.08505,
+   "h": "SL",
+   "R": -1,
+   "tx": 1793304000000
+  }
  },
  {
   "id": "2026-10-28|Aturan Eliz|XLM",
@@ -9884,13 +9896,26 @@
   "keyakinan": "",
   "alasan": "sweep Monday High lalu reclaim, breakdown ber-close, retest, searah tren",
   "alert": "FOMC hari ini atau besok: berita memicu noise. Eliz tetap hanya trading bila ada trigger jelas.",
-  "hasil": "menunggu",
-  "R": "",
+  "hasil": "kedaluwarsa",
+  "R": 1.46,
   "engine": "0537067ed55fc5be",
   "fwd": 1,
   "seq": 268,
   "prev": "d164eaa58573d982dbab",
-  "h": "9c10d4025a41d808c4dc"
+  "h": "9c10d4025a41d808c4dc",
+  "tx": 1793761602755,
+  "bm": {
+   "e": 0.1718,
+   "h": "kedaluwarsa",
+   "R": 1.53,
+   "tx": 1793761602755
+  },
+  "bi": {
+   "e": 0.1718,
+   "h": "SL",
+   "R": -1,
+   "tx": 1793304000000
+  }
  },
  {
   "id": "2026-10-28|Aturan Eliz|SOL",
@@ -10195,13 +10220,26 @@
   "keyakinan": "",
   "alasan": "sweep Monday High lalu reclaim, searah tren",
   "alert": "FOMC hari ini atau besok: berita memicu noise. Eliz tetap hanya trading bila ada trigger jelas.",
-  "hasil": "menunggu",
-  "R": "",
+  "hasil": "kedaluwarsa",
+  "R": 1.62,
   "engine": "0537067ed55fc5be",
   "fwd": 1,
   "seq": 277,
   "prev": "cadd4ba13ac0be5da4c7",
-  "h": "b1ac23c8c64a6515633b"
+  "h": "b1ac23c8c64a6515633b",
+  "tx": 1793761602755,
+  "bm": {
+   "e": 57.47,
+   "h": "kedaluwarsa",
+   "R": 1.681,
+   "tx": 1793761602755
+  },
+  "bi": {
+   "e": 57.47,
+   "h": "SL",
+   "R": -1,
+   "tx": 1793304000000
+  }
  },
  {
   "id": "2026-10-28|Aturan Eliz|ETH",
@@ -10333,7 +10371,19 @@
   "seq": 281,
   "prev": "01421154c5c80452d871",
   "h": "633785272fbda48fa753",
-  "tx": 1793368800000
+  "tx": 1793368800000,
+  "bm": {
+   "e": 4043.65,
+   "h": "SL",
+   "R": -1,
+   "tx": 1793365200000
+  },
+  "bi": {
+   "e": 4043.65,
+   "h": "kedaluwarsa",
+   "R": 0.927,
+   "tx": 1793761602755
+  }
  },
  {
   "id": "2026-10-28|Aturan Eliz|PEPE",
