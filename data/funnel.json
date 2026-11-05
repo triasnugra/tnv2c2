@@ -152,5 +152,58 @@
    "alasan": []
   },
   "dicatat_detail": []
+ },
+ {
+  "d": "2026-11-05",
+  "mesin": "2.0",
+  "dipindai": 36,
+  "kandidat": 5,
+  "dicatat": 3,
+  "ditolak": {
+   "data-tidak-valid": 4,
+   "jauh-dari-entry": 9,
+   "usang-tp-tercapai": 3,
+   "tanpa-pemicu": 19,
+   "skor-rendah": 5,
+   "sl-lebar": 1,
+   "ruang-target-sempit": 1,
+   "batas-portofolio": 1,
+   "duplikat-aktif": 1
+  },
+  "btc": {
+   "tr": 0,
+   "td": 0,
+   "ret3d": 2.74
+  },
+  "proteksi": {
+   "level": "ok",
+   "alasan": []
+  },
+  "dicatat_detail": [
+   {
+    "s": "ENA",
+    "arah": "SHORT",
+    "skor": 68,
+    "grade": "B",
+    "umur": 1,
+    "pemicu": "mon"
+   },
+   {
+    "s": "AVAX",
+    "arah": "SHORT",
+    "skor": 65,
+    "grade": "B",
+    "umur": 1,
+    "pemicu": "mon"
+   },
+   {
+    "s": "QQQB",
+    "arah": "LONG",
+    "skor": 60,
+    "grade": "B",
+    "umur": 1,
+    "pemicu": "dev"
+   }
+  ]
  }
 ]
