@@ -10920,8 +10920,8 @@
   "keyakinan": "",
   "alasan": "deviasi bawah lalu recovery, sweep Monday Low lalu reclaim, RSI divergence",
   "alert": "",
-  "hasil": "menunggu",
-  "R": "",
+  "hasil": "SL",
+  "R": -1,
   "trig": "dev",
   "score": 60,
   "grade": "B",
@@ -10931,6 +10931,7 @@
   "sv": 2,
   "seq": 298,
   "prev": "1922ae280a6ab417968c",
-  "h": "b5737b4e73283bbf0805"
+  "h": "b5737b4e73283bbf0805",
+  "tx": 1793890800000
  }
 ]
