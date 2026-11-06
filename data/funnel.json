@@ -205,5 +205,41 @@
     "pemicu": "dev"
    }
   ]
+ },
+ {
+  "d": "2026-11-06",
+  "mesin": "2.0",
+  "dipindai": 35,
+  "kandidat": 2,
+  "dicatat": 1,
+  "ditolak": {
+   "data-tidak-valid": 5,
+   "jauh-dari-entry": 22,
+   "ruang-target-sempit": 4,
+   "usang-tp-tercapai": 6,
+   "melawan-btc": 2,
+   "tanpa-pemicu": 9,
+   "skor-rendah": 1,
+   "duplikat-aktif": 1
+  },
+  "btc": {
+   "tr": -1,
+   "td": -1,
+   "ret3d": -0.95
+  },
+  "proteksi": {
+   "level": "ok",
+   "alasan": []
+  },
+  "dicatat_detail": [
+   {
+    "s": "TRX",
+    "arah": "SHORT",
+    "skor": 63,
+    "grade": "B",
+    "umur": 1,
+    "pemicu": "mon"
+   }
+  ]
  }
 ]

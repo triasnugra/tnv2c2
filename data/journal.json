@@ -10724,8 +10724,8 @@
   "keyakinan": "",
   "alasan": "sweep Monday High lalu reclaim, searah tren",
   "alert": "",
-  "hasil": "menunggu",
-  "R": "",
+  "hasil": "kedaluwarsa",
+  "R": 0.26,
   "trig": "mon",
   "score": 75,
   "grade": "A",
@@ -10735,7 +10735,20 @@
   "sv": 2,
   "seq": 291,
   "prev": "4bb2c051d90822c67399",
-  "h": "5acac4f777339a178375"
+  "h": "5acac4f777339a178375",
+  "tx": 1793929941490,
+  "bm": {
+   "e": 271.1,
+   "h": "SL",
+   "R": -1,
+   "tx": 1793372400000
+  },
+  "bi": {
+   "e": 271.1,
+   "h": "kedaluwarsa",
+   "R": 0.365,
+   "tx": 1793929941490
+  }
  },
  {
   "id": "2026-10-31|Aturan Eliz|SUI",
@@ -10945,5 +10958,33 @@
    "R": 2,
    "tx": 1793912400000
   }
+ },
+ {
+  "id": "2026-11-06|Aturan Eliz|TRX",
+  "waktu": "2026-11-06 03:38 UTC",
+  "t": 1793936281395,
+  "due": 1794541081395,
+  "agen": "Aturan Eliz",
+  "aset": "TRX",
+  "arah": "SHORT",
+  "entry": 0.3197,
+  "sl": 0.33088,
+  "tp": 0.29734,
+  "harga_awal": 0.3184,
+  "keyakinan": "",
+  "alasan": "sweep Monday High lalu reclaim, OBV divergence",
+  "alert": "",
+  "hasil": "menunggu",
+  "R": "",
+  "trig": "mon",
+  "score": 63,
+  "grade": "B",
+  "age": 1,
+  "engine": "c7f151a420fb0701",
+  "fwd": 1,
+  "sv": 2,
+  "seq": 299,
+  "prev": "b5737b4e73283bbf0805",
+  "h": "f7f421fee781c56ae8ec"
  }
 ]
