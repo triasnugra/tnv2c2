@@ -241,5 +241,52 @@
     "pemicu": "mon"
    }
   ]
+ },
+ {
+  "d": "2026-11-07",
+  "mesin": "2.0",
+  "dipindai": 37,
+  "kandidat": 4,
+  "dicatat": 2,
+  "ditolak": {
+   "data-tidak-valid": 3,
+   "jauh-dari-entry": 18,
+   "ruang-target-sempit": 4,
+   "usang-umur": 3,
+   "usang-tp-tercapai": 6,
+   "melawan-btc": 2,
+   "skor-rendah": 5,
+   "tanpa-pemicu": 13,
+   "likuiditas-rendah": 2,
+   "batas-portofolio": 1,
+   "duplikat-aktif": 1
+  },
+  "btc": {
+   "tr": -1,
+   "td": -1,
+   "ret3d": -2.08
+  },
+  "proteksi": {
+   "level": "ok",
+   "alasan": []
+  },
+  "dicatat_detail": [
+   {
+    "s": "ARB",
+    "arah": "SHORT",
+    "skor": 75,
+    "grade": "A",
+    "umur": 1,
+    "pemicu": "mon"
+   },
+   {
+    "s": "SUI",
+    "arah": "SHORT",
+    "skor": 75,
+    "grade": "A",
+    "umur": 2,
+    "pemicu": "mon"
+   }
+  ]
  }
 ]
