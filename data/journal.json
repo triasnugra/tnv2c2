@@ -11055,8 +11055,8 @@
   "keyakinan": "",
   "alasan": "sweep Monday High lalu reclaim, searah tren",
   "alert": "",
-  "hasil": "menunggu",
-  "R": "",
+  "hasil": "SL",
+  "R": -1,
   "trig": "mon",
   "score": 75,
   "grade": "A",
@@ -11066,7 +11066,8 @@
   "sv": 2,
   "seq": 300,
   "prev": "f7f421fee781c56ae8ec",
-  "h": "df0707b2a17f5778a046"
+  "h": "df0707b2a17f5778a046",
+  "tx": 1794214800000
  },
  {
   "id": "2026-11-07|Aturan Eliz|SUI",
