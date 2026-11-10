@@ -16,7 +16,12 @@ const JF = 'data/journal.json';
 // manual (hasil, R, tx) akan berbeda dari penilaian ulang.
 export async function regrade(rows, P, log = () => {}) {
   const bad = []; let n = 0;
-  for (const r of rows.filter(r => r.fwd && r.agen === P.agen && (r.arah === 'LONG' || r.arah === 'SHORT') && RES(r.hasil))) {
+  // Hanya baris protokol INI (hash mesin sama dengan protokol) yang dinilai ulang, sama dengan himpunan yang dievaluasi analyze().
+  // Baris mesin lama (v1) dinilai dengan simulator lama (sebelum aturan 6 / batal bila TP tanpa isi); menilainya dengan
+  // simulator v2 pasti berbeda dan bukan tanda manipulasi. Keutuhannya tetap dijaga rantai hash.
+  const cand = rows.filter(r => r.fwd && r.agen === P.agen && (r.arah === 'LONG' || r.arah === 'SHORT') && RES(r.hasil));
+  const inProto = r => r.engine === P.engine, skipped = cand.filter(r => !inProto(r)).length;
+  for (const r of cand.filter(inProto)) {
     const sym = r.aset + 'USDT', t0 = Math.floor(r.t / H1) * H1;
     try {
       const g = await gradeTrade(r, {
@@ -29,7 +34,7 @@ export async function regrade(rows, P, log = () => {}) {
         bad.push({ id: r.id, tersimpan: `${r.hasil} ${r.R}`, penilaian_ulang: g ? `${g.hasil} ${g.R.toFixed(2)}` : 'belum selesai' });
     } catch (e) { log(`regrade gagal ${r.id}: ${e.message}`); }
   }
-  return { checked: n, mismatches: bad };
+  return { checked: n, mismatches: bad, skipped };
 }
 
 if (import.meta.url === pathToFileURL(process.argv[1] || '').href) {
@@ -49,7 +54,7 @@ if (import.meta.url === pathToFileURL(process.argv[1] || '').href) {
     let bad = !c.ok;
     if (flags.includes('--regrade')) {
       const g = await regrade(rows, P, m => console.error(' ', m));
-      console.log(`\nPenilaian ulang: ${g.checked} baris dicek, ${g.mismatches.length} berbeda.`);
+      console.log(`\nPenilaian ulang: ${g.checked} baris dicek, ${g.mismatches.length} berbeda.` + (g.skipped ? ` ${g.skipped} baris mesin lama (sebelum protokol ini) dilewati; hanya rantai hash yang memeriksanya.` : ''));
       for (const m of g.mismatches) console.log(`- ${m.id}: tersimpan ${m.tersimpan}, penilaian ulang ${m.penilaian_ulang}`);
       bad = bad || g.mismatches.length > 0;
     }
