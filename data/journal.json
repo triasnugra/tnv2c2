@@ -11112,8 +11112,8 @@
   "keyakinan": "",
   "alasan": "sweep Monday High lalu reclaim, searah tren",
   "alert": "",
-  "hasil": "menunggu",
-  "R": "",
+  "hasil": "SL",
+  "R": -1,
   "trig": "mon",
   "score": 73,
   "grade": "B",
@@ -11123,7 +11123,8 @@
   "sv": 2,
   "seq": 302,
   "prev": "12fc0a9606488c603d64",
-  "h": "3c75cd1ef65e3a99b3b1"
+  "h": "3c75cd1ef65e3a99b3b1",
+  "tx": 1794412800000
  },
  {
   "id": "2026-11-11|Aturan Eliz|MUB",
@@ -11140,8 +11141,8 @@
   "keyakinan": "",
   "alasan": "sweep Monday High lalu reclaim, searah tren",
   "alert": "",
-  "hasil": "menunggu",
-  "R": "",
+  "hasil": "SL",
+  "R": -1,
   "trig": "mon",
   "score": 65,
   "grade": "B",
@@ -11151,6 +11152,7 @@
   "sv": 2,
   "seq": 303,
   "prev": "3c75cd1ef65e3a99b3b1",
-  "h": "2b1736eed2489569daf0"
+  "h": "2b1736eed2489569daf0",
+  "tx": 1794409200000
  }
 ]
