@@ -319,5 +319,54 @@
    "alasan": []
   },
   "dicatat_detail": []
+ },
+ {
+  "d": "2026-11-11",
+  "mesin": "2.0",
+  "dipindai": 38,
+  "kandidat": 3,
+  "dicatat": 2,
+  "ditolak": {
+   "data-tidak-valid": 2,
+   "ruang-target-sempit": 5,
+   "skor-rendah": 9,
+   "tanpa-pemicu": 19,
+   "melawan-btc": 8,
+   "usang-sl-tertembus": 1,
+   "jauh-dari-entry": 3,
+   "sl-lebar": 1,
+   "usang-umur": 2,
+   "usang-tp-tercapai": 1,
+   "usang-sudah-berjalan": 1,
+   "likuiditas-rendah": 1,
+   "duplikat-aktif": 1
+  },
+  "btc": {
+   "tr": -1,
+   "td": -1,
+   "ret3d": -2.73
+  },
+  "proteksi": {
+   "level": "ok",
+   "alasan": []
+  },
+  "dicatat_detail": [
+   {
+    "s": "SNDKB",
+    "arah": "SHORT",
+    "skor": 73,
+    "grade": "B",
+    "umur": 1,
+    "pemicu": "mon"
+   },
+   {
+    "s": "MUB",
+    "arah": "SHORT",
+    "skor": 65,
+    "grade": "B",
+    "umur": 1,
+    "pemicu": "mon"
+   }
+  ]
  }
 ]
