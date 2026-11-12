@@ -11121,8 +11121,8 @@
   "keyakinan": "",
   "alasan": "sweep Monday High lalu reclaim, searah tren",
   "alert": "",
-  "hasil": "menunggu",
-  "R": "",
+  "hasil": "tidak terisi",
+  "R": 0,
   "trig": "mon",
   "score": 75,
   "grade": "A",
@@ -11132,7 +11132,8 @@
   "sv": 2,
   "seq": 301,
   "prev": "df0707b2a17f5778a046",
-  "h": "12fc0a9606488c603d64"
+  "h": "12fc0a9606488c603d64",
+  "tx": 1794488400000
  },
  {
   "id": "2026-11-11|Aturan Eliz|SNDKB",
