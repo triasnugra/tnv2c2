@@ -368,5 +368,45 @@
     "pemicu": "mon"
    }
   ]
+ },
+ {
+  "d": "2026-11-13",
+  "mesin": "2.0",
+  "dipindai": 38,
+  "kandidat": 1,
+  "dicatat": 1,
+  "ditolak": {
+   "data-tidak-valid": 2,
+   "tanpa-pemicu": 22,
+   "usang-tp-tercapai": 2,
+   "jauh-dari-entry": 8,
+   "ruang-target-sempit": 6,
+   "usang-umur": 1,
+   "usang-sl-tertembus": 1,
+   "usang-sudah-berjalan": 1,
+   "melawan-btc": 2,
+   "btc-momentum-lawan": 2,
+   "skor-rendah": 4,
+   "sl-lebar": 2
+  },
+  "btc": {
+   "tr": -1,
+   "td": -1,
+   "ret3d": -5.19
+  },
+  "proteksi": {
+   "level": "ok",
+   "alasan": []
+  },
+  "dicatat_detail": [
+   {
+    "s": "SPCXB",
+    "arah": "SHORT",
+    "skor": 78,
+    "grade": "A",
+    "umur": 1,
+    "pemicu": "mon"
+   }
+  ]
  }
 ]

@@ -11192,5 +11192,33 @@
   "prev": "3c75cd1ef65e3a99b3b1",
   "h": "2b1736eed2489569daf0",
   "tx": 1794409200000
+ },
+ {
+  "id": "2026-11-13|Aturan Eliz|SPCXB",
+  "waktu": "2026-11-13 02:51 UTC",
+  "t": 1794538264130,
+  "due": 1795143064130,
+  "agen": "Aturan Eliz",
+  "aset": "SPCXB",
+  "arah": "SHORT",
+  "entry": 143.33,
+  "sl": 151.01,
+  "tp": 127.96,
+  "harga_awal": 141.71,
+  "keyakinan": "",
+  "alasan": "sweep Monday High lalu reclaim, searah tren",
+  "alert": "",
+  "hasil": "menunggu",
+  "R": "",
+  "trig": "mon",
+  "score": 78,
+  "grade": "A",
+  "age": 1,
+  "engine": "c7f151a420fb0701",
+  "fwd": 1,
+  "sv": 2,
+  "seq": 304,
+  "prev": "2b1736eed2489569daf0",
+  "h": "1498d76ed1fe81f3c037"
  }
 ]
