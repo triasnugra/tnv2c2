@@ -11052,8 +11052,8 @@
   "keyakinan": "",
   "alasan": "sweep Monday High lalu reclaim, OBV divergence",
   "alert": "",
-  "hasil": "menunggu",
-  "R": "",
+  "hasil": "kedaluwarsa",
+  "R": 0.4,
   "trig": "mon",
   "score": 63,
   "grade": "B",
@@ -11063,7 +11063,20 @@
   "sv": 2,
   "seq": 299,
   "prev": "b5737b4e73283bbf0805",
-  "h": "f7f421fee781c56ae8ec"
+  "h": "f7f421fee781c56ae8ec",
+  "tx": 1794541081395,
+  "bm": {
+   "e": 0.3183,
+   "h": "kedaluwarsa",
+   "R": 0.277,
+   "tx": 1794541081395
+  },
+  "bi": {
+   "e": 0.3183,
+   "h": "kedaluwarsa",
+   "R": -0.277,
+   "tx": 1794541081395
+  }
  },
  {
   "id": "2026-11-07|Aturan Eliz|ARB",
