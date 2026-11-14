@@ -11289,8 +11289,8 @@
   "keyakinan": "",
   "alasan": "sweep Monday High lalu reclaim",
   "alert": "",
-  "hasil": "menunggu",
-  "R": "",
+  "hasil": "tidak terisi",
+  "R": 0,
   "trig": "mon",
   "score": 65,
   "grade": "B",
@@ -11300,6 +11300,7 @@
   "sv": 2,
   "seq": 306,
   "prev": "43654526cbc384392896",
-  "h": "184ef27dc64badcd8f96"
+  "h": "184ef27dc64badcd8f96",
+  "tx": 1794686400000
  }
 ]
