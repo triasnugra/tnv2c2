@@ -11146,7 +11146,19 @@
   "seq": 301,
   "prev": "df0707b2a17f5778a046",
   "h": "12fc0a9606488c603d64",
-  "tx": 1794488400000
+  "tx": 1794488400000,
+  "bm": {
+   "e": 0.8665,
+   "h": "kedaluwarsa",
+   "R": 1.493,
+   "tx": 1794626941139
+  },
+  "bi": {
+   "e": 0.8665,
+   "h": "SL",
+   "R": -1,
+   "tx": 1794171600000
+  }
  },
  {
   "id": "2026-11-11|Aturan Eliz|SNDKB",
@@ -11233,5 +11245,61 @@
   "seq": 304,
   "prev": "2b1736eed2489569daf0",
   "h": "1498d76ed1fe81f3c037"
+ },
+ {
+  "id": "2026-11-14|Aturan Eliz|GOOGLB",
+  "waktu": "2026-11-14 03:49 UTC",
+  "t": 1794628147179,
+  "due": 1795232947179,
+  "agen": "Aturan Eliz",
+  "aset": "GOOGLB",
+  "arah": "SHORT",
+  "entry": 296.4,
+  "sl": 306.52,
+  "tp": 276.15,
+  "harga_awal": 294.4,
+  "keyakinan": "",
+  "alasan": "sweep Monday High lalu reclaim, searah tren",
+  "alert": "",
+  "hasil": "menunggu",
+  "R": "",
+  "trig": "mon",
+  "score": 70,
+  "grade": "B",
+  "age": 1,
+  "engine": "c7f151a420fb0701",
+  "fwd": 1,
+  "sv": 2,
+  "seq": 305,
+  "prev": "1498d76ed1fe81f3c037",
+  "h": "43654526cbc384392896"
+ },
+ {
+  "id": "2026-11-14|Aturan Eliz|INJ",
+  "waktu": "2026-11-14 03:49 UTC",
+  "t": 1794628147179,
+  "due": 1795232947179,
+  "agen": "Aturan Eliz",
+  "aset": "INJ",
+  "arah": "SHORT",
+  "entry": 8.315,
+  "sl": 8.9558,
+  "tp": 7.0334,
+  "harga_awal": 8.072,
+  "keyakinan": "",
+  "alasan": "sweep Monday High lalu reclaim",
+  "alert": "",
+  "hasil": "menunggu",
+  "R": "",
+  "trig": "mon",
+  "score": 65,
+  "grade": "B",
+  "age": 1,
+  "engine": "c7f151a420fb0701",
+  "fwd": 1,
+  "sv": 2,
+  "seq": 306,
+  "prev": "43654526cbc384392896",
+  "h": "184ef27dc64badcd8f96"
  }
 ]
