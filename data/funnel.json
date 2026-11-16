@@ -487,5 +487,37 @@
    "alasan": []
   },
   "dicatat_detail": []
+ },
+ {
+  "d": "2026-11-16",
+  "mesin": "2.0",
+  "dipindai": 37,
+  "kandidat": 0,
+  "dicatat": 0,
+  "ditolak": {
+   "data-tidak-valid": 3,
+   "tanpa-pemicu": 19,
+   "usang-umur": 10,
+   "usang-tp-tercapai": 10,
+   "jauh-dari-entry": 13,
+   "ruang-target-sempit": 4,
+   "usang-sl-tertembus": 2,
+   "usang-sudah-berjalan": 2,
+   "skor-rendah": 9,
+   "melawan-btc": 4,
+   "btc-momentum-lawan": 4,
+   "likuiditas-rendah": 2,
+   "sl-lebar": 2
+  },
+  "btc": {
+   "tr": -1,
+   "td": -1,
+   "ret3d": -8.55
+  },
+  "proteksi": {
+   "level": "ok",
+   "alasan": []
+  },
+  "dicatat_detail": []
  }
 ]
