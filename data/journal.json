@@ -11285,8 +11285,8 @@
   "keyakinan": "",
   "alasan": "sweep Monday High lalu reclaim, searah tren",
   "alert": "",
-  "hasil": "menunggu",
-  "R": "",
+  "hasil": "TP",
+  "R": 2,
   "trig": "mon",
   "score": 70,
   "grade": "B",
@@ -11296,7 +11296,20 @@
   "sv": 2,
   "seq": 305,
   "prev": "1498d76ed1fe81f3c037",
-  "h": "43654526cbc384392896"
+  "h": "43654526cbc384392896",
+  "tx": 1795118400000,
+  "bm": {
+   "e": 293.19,
+   "h": "TP",
+   "R": 2,
+   "tx": 1795118400000
+  },
+  "bi": {
+   "e": 293.19,
+   "h": "SL",
+   "R": -1,
+   "tx": 1794906000000
+  }
  },
  {
   "id": "2026-11-14|Aturan Eliz|INJ",
