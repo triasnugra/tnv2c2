@@ -605,5 +605,35 @@
     "pemicu": "mon"
    }
   ]
+ },
+ {
+  "d": "2026-11-21",
+  "mesin": "2.0",
+  "dipindai": 37,
+  "kandidat": 0,
+  "dicatat": 0,
+  "ditolak": {
+   "data-tidak-valid": 3,
+   "tanpa-pemicu": 14,
+   "jauh-dari-entry": 21,
+   "skor-rendah": 8,
+   "sl-lebar": 2,
+   "usang-umur": 6,
+   "ruang-target-sempit": 4,
+   "usang-tp-tercapai": 5,
+   "usang-sudah-berjalan": 1,
+   "melawan-btc": 1,
+   "btc-momentum-lawan": 1
+  },
+  "btc": {
+   "tr": -1,
+   "td": -1,
+   "ret3d": -9.23
+  },
+  "proteksi": {
+   "level": "ok",
+   "alasan": []
+  },
+  "dicatat_detail": []
  }
 ]
