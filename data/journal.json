@@ -11380,8 +11380,8 @@
   "keyakinan": "",
   "alasan": "sweep Monday High lalu reclaim, searah tren",
   "alert": "",
-  "hasil": "menunggu",
-  "R": "",
+  "hasil": "tidak terisi",
+  "R": 0,
   "trig": "mon",
   "score": 76,
   "grade": "A",
@@ -11391,7 +11391,8 @@
   "sv": 2,
   "seq": 307,
   "prev": "184ef27dc64badcd8f96",
-  "h": "62a625b831ac029b595c"
+  "h": "62a625b831ac029b595c",
+  "tx": 1795240800000
  },
  {
   "id": "2026-11-20|Aturan Eliz|SPCXB",
@@ -11436,8 +11437,8 @@
   "keyakinan": "",
   "alasan": "sweep Monday High lalu reclaim, searah tren",
   "alert": "",
-  "hasil": "menunggu",
-  "R": "",
+  "hasil": "tidak terisi",
+  "R": 0,
   "trig": "mon",
   "score": 65,
   "grade": "B",
@@ -11447,6 +11448,7 @@
   "sv": 2,
   "seq": 309,
   "prev": "4702ee267182157d52ed",
-  "h": "a087c6f09170cd65e9c8"
+  "h": "a087c6f09170cd65e9c8",
+  "tx": 1795233600000
  }
 ]
