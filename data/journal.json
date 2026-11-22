@@ -11450,5 +11450,33 @@
   "prev": "4702ee267182157d52ed",
   "h": "a087c6f09170cd65e9c8",
   "tx": 1795233600000
+ },
+ {
+  "id": "2026-11-22|Aturan Eliz|XRP",
+  "waktu": "2026-11-22 01:43 UTC",
+  "t": 1795311813009,
+  "due": 1795916613009,
+  "agen": "Aturan Eliz",
+  "aset": "XRP",
+  "arah": "SHORT",
+  "entry": 0.9769,
+  "sl": 1.0397,
+  "tp": 0.85121,
+  "harga_awal": 0.932,
+  "keyakinan": "",
+  "alasan": "sweep Monday High lalu reclaim, searah tren",
+  "alert": "Menjelang penutupan weekly (Senin 00:00 UTC).",
+  "hasil": "menunggu",
+  "R": "",
+  "trig": "mon",
+  "score": 66,
+  "grade": "B",
+  "age": 3,
+  "engine": "c7f151a420fb0701",
+  "fwd": 1,
+  "sv": 2,
+  "seq": 310,
+  "prev": "a087c6f09170cd65e9c8",
+  "h": "2d7189209d03354fc6c9"
  }
 ]

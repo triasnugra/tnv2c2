@@ -635,5 +635,44 @@
    "alasan": []
   },
   "dicatat_detail": []
+ },
+ {
+  "d": "2026-11-22",
+  "mesin": "2.0",
+  "dipindai": 38,
+  "kandidat": 1,
+  "dicatat": 1,
+  "ditolak": {
+   "data-tidak-valid": 2,
+   "usang-sudah-berjalan": 3,
+   "ruang-target-sempit": 7,
+   "skor-rendah": 11,
+   "tanpa-pemicu": 14,
+   "usang-umur": 13,
+   "usang-tp-tercapai": 15,
+   "jauh-dari-entry": 19,
+   "sl-lebar": 2,
+   "melawan-btc": 3,
+   "likuiditas-rendah": 3
+  },
+  "btc": {
+   "tr": -1,
+   "td": -1,
+   "ret3d": -4.52
+  },
+  "proteksi": {
+   "level": "ok",
+   "alasan": []
+  },
+  "dicatat_detail": [
+   {
+    "s": "XRP",
+    "arah": "SHORT",
+    "skor": 66,
+    "grade": "B",
+    "umur": 3,
+    "pemicu": "mon"
+   }
+  ]
  }
 ]
