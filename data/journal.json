@@ -11502,5 +11502,33 @@
   "seq": 310,
   "prev": "a087c6f09170cd65e9c8",
   "h": "2d7189209d03354fc6c9"
+ },
+ {
+  "id": "2026-11-24|Aturan Eliz|LINK",
+  "waktu": "2026-11-24 04:23 UTC",
+  "t": 1795494220302,
+  "due": 1796099020302,
+  "agen": "Aturan Eliz",
+  "aset": "LINK",
+  "arah": "SHORT",
+  "entry": 9.4388,
+  "sl": 10.073,
+  "tp": 8.1706,
+  "harga_awal": 9.013,
+  "keyakinan": "",
+  "alasan": "Wolf: breakout trendline gagal, searah tren",
+  "alert": "",
+  "hasil": "menunggu",
+  "R": "",
+  "trig": "wolf",
+  "score": 70,
+  "grade": "B",
+  "age": 1,
+  "engine": "c7f151a420fb0701",
+  "fwd": 1,
+  "sv": 2,
+  "seq": 311,
+  "prev": "2d7189209d03354fc6c9",
+  "h": "eec743a2b8249975f9c1"
  }
 ]
