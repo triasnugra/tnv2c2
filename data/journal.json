@@ -11421,8 +11421,8 @@
   "keyakinan": "",
   "alasan": "sweep Monday High lalu reclaim, searah tren",
   "alert": "",
-  "hasil": "menunggu",
-  "R": "",
+  "hasil": "TP",
+  "R": 2,
   "trig": "mon",
   "score": 75,
   "grade": "A",
@@ -11432,7 +11432,8 @@
   "sv": 2,
   "seq": 308,
   "prev": "62a625b831ac029b595c",
-  "h": "4702ee267182157d52ed"
+  "h": "4702ee267182157d52ed",
+  "tx": 1795532400000
  },
  {
   "id": "2026-11-20|Aturan Eliz|TAO",
