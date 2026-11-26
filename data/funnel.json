@@ -712,5 +712,33 @@
     "pemicu": "wolf"
    }
   ]
+ },
+ {
+  "d": "2026-11-26",
+  "mesin": "2.0",
+  "dipindai": 37,
+  "kandidat": 0,
+  "dicatat": 0,
+  "ditolak": {
+   "data-tidak-valid": 3,
+   "tanpa-pemicu": 22,
+   "jauh-dari-entry": 10,
+   "melawan-btc": 12,
+   "sl-lebar": 2,
+   "skor-rendah": 10,
+   "ruang-target-sempit": 3,
+   "usang-tp-tercapai": 2,
+   "likuiditas-rendah": 2
+  },
+  "btc": {
+   "tr": -1,
+   "td": -1,
+   "ret3d": -1.33
+  },
+  "proteksi": {
+   "level": "ok",
+   "alasan": []
+  },
+  "dicatat_detail": []
  }
 ]
