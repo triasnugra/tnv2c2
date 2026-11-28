@@ -11543,5 +11543,33 @@
   "seq": 311,
   "prev": "2d7189209d03354fc6c9",
   "h": "eec743a2b8249975f9c1"
+ },
+ {
+  "id": "2026-11-28|Aturan Eliz|BTC",
+  "waktu": "2026-11-28 04:38 UTC",
+  "t": 1795840729833,
+  "due": 1796445529833,
+  "agen": "Aturan Eliz",
+  "aset": "BTC",
+  "arah": "SHORT",
+  "entry": 60237,
+  "sl": 64926,
+  "tp": 50857,
+  "harga_awal": 59923.1,
+  "keyakinan": "",
+  "alasan": "Wolf: breakout trendline gagal, searah tren",
+  "alert": "",
+  "hasil": "menunggu",
+  "R": "",
+  "trig": "wolf",
+  "score": 66,
+  "grade": "B",
+  "age": 1,
+  "engine": "c7f151a420fb0701",
+  "fwd": 1,
+  "sv": 2,
+  "seq": 312,
+  "prev": "eec743a2b8249975f9c1",
+  "h": "1a765b01ee39b8c44ae7"
  }
 ]
